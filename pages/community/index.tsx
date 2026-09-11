@@ -1,7 +1,14 @@
-const Community = () => {
-  console.log("client side ");
+import withLayoutBasic from "@/libs/components/layout/layoutBasic";
+import { NextPage } from "next";
 
-  return <h1>Community</h1>;
+const Community: NextPage = () => {
+  return (
+    <div>
+      <h1>COMMUNITY</h1>
+      <button onClick={() => alert("Press me")} style={{ margin: "10px" }}>
+        Click
+      </button>
+    </div>
+  );
 };
-
-export default Community;
+export default withLayoutBasic(Community);

@@ -1,5 +1,12 @@
-const Property = () => {
-  return <h1>Property </h1>;
-};
+import withLayoutBasic from "@/libs/components/layout/layoutBasic";
+import { Container, Stack } from "@mui/material";
+import { NextPage } from "next";
 
-export default Property;
+const PropertyList: NextPage = () => {
+  return (
+    <>
+      <Container>PROPERTY LIST</Container>
+    </>
+  );
+};
+export default withLayoutBasic(PropertyList);
