@@ -1,6 +1,17 @@
-import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { light } from "../scss/MaterialTheme/index";
+import { useState } from "react";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  // @ts-ignore
+  const [theme, setTheme] = useState(createTheme(light));
+
+  //* Socket.io, Redux, Mui
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
